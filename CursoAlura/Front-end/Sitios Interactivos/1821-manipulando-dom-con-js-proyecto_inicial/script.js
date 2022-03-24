@@ -1,9 +1,8 @@
+import { addTask } from "./components/addTask.js";
+import { displayTasks } from "./components/displayTasks.js";
+
 const btn = document.querySelector("[data-form-btn]");
 
-const createTask = (evento) => {
-    evento.preventDefault();
-    const input = document.querySelector("[data-form-input]");
-    console.log(input.value);
-}
+btn.addEventListener("click", addTask);
 
-btn.addEventListener("click", createTask);
+displayTasks();
